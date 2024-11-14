@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentaje Mejorada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="focusBaseNumber()">
+    <div class="calculator">
+        <h2>Calculadora de Porcentajes</h2>
+        <p id="helpText">Ingresa el número base y el porcentaje que deseas calcular.</p>
+        <input type="number" id="baseNumber" placeholder="Número base" />
+        <input type="number" id="percentage" placeholder="Porcentaje" />
+
+        <button onclick="calculatePercentage()">Calcular</button>
+        <button onclick="inversePercentage()">Invertir %</button>
+        <button onclick="clearFields()">Limpiar</button>
+        
+        <input type="text" id="result" placeholder="Resultado" disabled />
+        <div id="historyContainer">
+            <h4>Historial</h4>
+            <ul id="history"></ul>
+        </div>
+        <button onclick="toggleTheme()">🌞/🌜 Modo Oscuro/Claro</button>
+        <p id="statusMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
